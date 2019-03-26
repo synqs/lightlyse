@@ -1,5 +1,9 @@
-from distutils.core import setup
-setup(
+import setuptools
+
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
+setuptools.setup(
   name = 'lightlyse',         # How you named your package folder (MyLib)
   packages = ['lightlyse'],   # Chose the same as "name"
   version = '0.1',      # Start with a small number and increase it with every change you make
@@ -11,8 +15,8 @@ setup(
   download_url = 'https://github.com/synqs/lightlyse/archive/v_01.tar.gz',    # I explain this later on
   keywords = ['labscriptsuite', 'python', 'data-analysis'],   # Keywords that define your package best
   install_requires=[            # I get to this in a second
-          'validators',
-          'beautifulsoup4',
+          'atomicwrites', 'attrs', 'certifi', 'h5py', 'more-itertools', 'numpy',
+          'pluggy', 'py', 'pytest', 'six', 'virtualenv'
       ],
   classifiers=[
     'Development Status :: 3 - Alpha',      # Chose either "3 - Alpha", "4 - Beta" or "5 - Production/Stable" as the current state of your package
