@@ -11,4 +11,4 @@
 #                                                                   #
 #####################################################################
 
-from BasicClasses import Run, Sequence
+from .BasicClasses import Run, Sequence
