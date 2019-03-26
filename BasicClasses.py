@@ -1,6 +1,22 @@
+#####################################################################
+#                                                                   #
+# /__init__.py                                                      #
+#                                                                   #
+# Copyright 2013, Monash University                                 #
+#                                                                   #
+# This file is part of the program lyse, in the labscript suite     #
+# (see http://labscriptsuite.org), and is licensed under the        #
+# Simplified BSD License. See the license.txt file in the root of   #
+# the project for the full license.                                 #
+#                                                                   #
+#####################################################################
+
+
 import h5py
 import inspect
 import os
+from numpy import array, ndarray
+
 class Run(object):
     def __init__(self,h5_path,no_write=False):
         self.no_write = no_write
@@ -307,4 +323,7 @@ class Sequence(Run):
 
 
 if __name__ == "__main__":
-    r = Run('my_test.h5')
+    r = Run('run030.h5', no_write = True)
+    label = 'absorption'
+    orientation = 'horizontal'
+    Iat = r.get_image(orientation, label, 'NaAtoms')
