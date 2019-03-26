@@ -1,4 +1,4 @@
-from .BasicClasses import Run
+from lightlyse.BasicClasses import Run
 
 def test_import_run():
     r = Run('run030.h5', no_write = True)

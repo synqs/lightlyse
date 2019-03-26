@@ -11,4 +11,4 @@
 #                                                                   #
 #####################################################################
 
-from .BasicClasses import Run, Sequence
+from lightlyse.BasicClasses import Run, Sequence
